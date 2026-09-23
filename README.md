@@ -1,4 +1,4 @@
-# AAZ Global Logistics & Autos
+# AAZ Global Logistics Ventures & Autos
 
 Premium static website for a private chauffeur and executive transportation service based in Abuja, Nigeria.
 
@@ -21,3 +21,9 @@ Premium static website for a private chauffeur and executive transportation serv
 
 ## SEO approach
 The site avoids hidden keyword stuffing. Instead it uses clear page titles and descriptions, crawlable service pages, semantic headings, internal links, relevant service-area copy, descriptive image alt text, structured data and an XML sitemap.
+
+## Demo deployment on GitHub Pages
+
+For a temporary demo, use **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: main → Folder: /(root) → Save**. This site is a plain static site with `index.html` at the repository root, so no build command is needed. GitHub's Pages documentation describes this branch-based publishing flow. After publishing, use **Settings → Pages → Visit site** to open the demo. Changes may take several minutes to appear.
+
+The current HTML metadata, `robots.txt` and `sitemap.xml` use the temporary GitHub Pages URL. When the final domain is chosen, replace those URLs before moving the site to production.
