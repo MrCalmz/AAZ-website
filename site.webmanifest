@@ -1,0 +1,9 @@
+{
+  "name":"AAZ Global Logistics & Autos",
+  "short_name":"AAZ Global Autos",
+  "start_url":"/",
+  "display":"standalone",
+  "background_color":"#07111f",
+  "theme_color":"#07111f",
+  "icons":[{"src":"/assets/logo.png","sizes":"192x192","type":"image/png"}]
+}
