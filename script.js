@@ -1,7 +1,7 @@
 document.documentElement.classList.add("js");
 
 const AAZ_CONFIG = {
-  whatsappNumber: "", // Digits only, e.g. 2348012345678
+  whatsappNumber: "2347048894637", // Digits only, e.g. 2348012345678
 };
 
 const $ = (selector, scope = document) => scope.querySelector(selector);
@@ -65,7 +65,7 @@ if (bookingForm) {
 
     const data = Object.fromEntries(new FormData(bookingForm).entries());
     const message = [
-      "AAZ GLOBAL LOGISTICS & AUTOS — BOOKING REQUEST",
+      "AAZ GLOBAL LOGISTICS VENTURES & AUTOS — BOOKING REQUEST",
       "",
       "Name: " + (data.name || "Not provided"),
       "Phone / WhatsApp: " + (data.phone || "Not provided"),
