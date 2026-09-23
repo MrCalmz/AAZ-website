@@ -24,6 +24,24 @@ const addWhatsAppQuickButton = () => {
   document.body.appendChild(link);
 };
 
+const addMobileMenuEnhancements = () => {
+  const header = $(".site-header");
+  const menu = $(".menu-toggle");
+  const nav = $(".nav-links");
+  if (!header || !menu || !nav || $(".mobile-menu-cta", nav)) return;
+
+  const navCta = $(".nav-cta", header);
+  const cta = document.createElement("a");
+  cta.className = "mobile-menu-cta";
+  cta.href = navCta?.getAttribute("href") || "contact.html#booking";
+  cta.innerHTML = 'Request a Journey <span aria-hidden="true">→</span>';
+
+  const note = document.createElement("span");
+  note.className = "mobile-menu-note";
+  note.textContent = "PRIVATE CHAUFFEUR SERVICE · ABUJA · NATIONWIDE";
+  nav.append(cta, note);
+};
+
 const revealObserver = "IntersectionObserver" in window
   ? new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -40,6 +58,7 @@ else $$(".reveal").forEach((el) => el.classList.add("is-visible"));
 
 const header = $(".site-header");
 const menu = $(".menu-toggle");
+
 if (header && menu) {
   const setMenuState = (open) => {
     header.classList.toggle("menu-open", open);
@@ -48,11 +67,20 @@ if (header && menu) {
     document.body.classList.toggle("menu-open", open);
   };
 
-  menu.addEventListener("click", () => setMenuState(!header.classList.contains("menu-open")));
+  menu.addEventListener("click", () => {
+    setMenuState(!header.classList.contains("menu-open"));
+  });
 
-  $$(".nav-links a", header).forEach((link) =>
-    link.addEventListener("click", () => setMenuState(false))
-  );
+  $$(".nav-links a", header).forEach((link) => {
+    link.addEventListener("click", () => setMenuState(false));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && header.classList.contains("menu-open")) {
+      setMenuState(false);
+      menu.focus();
+    }
+  });
 }
 
 const today = new Date();
@@ -127,6 +155,7 @@ $$('a[href^="#"]').forEach((link) => {
   });
 });
 
+addMobileMenuEnhancements();
 addWhatsAppQuickButton();
 
 const year = $("#year");
