@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://YOUR-DOMAIN.example/</loc></url>
-  <url><loc>https://YOUR-DOMAIN.example/services.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN.example/fleet.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN.example/about.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN.example/contact.html</loc></url>
+  <url><loc>https://mrcalmz.github.io/AAZ-website/</loc></url>
+  <url><loc>https://mrcalmz.github.io/AAZ-website/services.html</loc></url>
+  <url><loc>https://mrcalmz.github.io/AAZ-website/fleet.html</loc></url>
+  <url><loc>https://mrcalmz.github.io/AAZ-website/about.html</loc></url>
+  <url><loc>https://mrcalmz.github.io/AAZ-website/contact.html</loc></url>
+  <url><loc>https://mrcalmz.github.io/AAZ-website/chauffeur-service-abuja.html</loc></url>
+  <url><loc>https://mrcalmz.github.io/AAZ-website/airport-transfer-abuja.html</loc></url>
+  <url><loc>https://mrcalmz.github.io/AAZ-website/hotel-transfer-abuja.html</loc></url>
+  <url><loc>https://mrcalmz.github.io/AAZ-website/corporate-transport-abuja.html</loc></url>
+  <url><loc>https://mrcalmz.github.io/AAZ-website/interstate-chauffeur-nigeria.html</loc></url>
+  <url><loc>https://mrcalmz.github.io/AAZ-website/privacy.html</loc></url>
 </urlset>
