@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-# Replace YOUR-DOMAIN.example with the production domain before launch.
+Sitemap: https://mrcalmz.github.io/AAZ-website/sitemap.xml
