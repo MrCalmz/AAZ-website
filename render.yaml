@@ -1,0 +1,40 @@
+services:
+  - type: web
+    runtime: static
+    name: aaz-global-logistics-ventures
+    buildCommand: ""
+    staticPublishPath: .
+    routes:
+      - type: redirect
+        source: /services.html
+        destination: /services/
+      - type: redirect
+        source: /fleet.html
+        destination: /fleet/
+      - type: redirect
+        source: /about.html
+        destination: /about/
+      - type: redirect
+        source: /contact.html
+        destination: /contact/
+      - type: redirect
+        source: /chauffeur-service-abuja.html
+        destination: /chauffeur-service-abuja/
+      - type: redirect
+        source: /airport-transfer-abuja.html
+        destination: /airport-transfer-abuja/
+      - type: redirect
+        source: /hotel-transfer-abuja.html
+        destination: /hotel-transfer-abuja/
+      - type: redirect
+        source: /corporate-transport-abuja.html
+        destination: /corporate-transport-abuja/
+      - type: redirect
+        source: /interstate-chauffeur-nigeria.html
+        destination: /interstate-chauffeur-nigeria/
+      - type: redirect
+        source: /privacy.html
+        destination: /privacy/
+      - type: redirect
+        source: /index.html
+        destination: /
