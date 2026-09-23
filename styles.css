@@ -1115,3 +1115,54 @@ html:has(.inner-header){
     max-width:100%;
   }
 }
+
+
+/* Final mobile menu positioning: keep the panel attached to the fixed header.
+   This avoids fixed-child containing-block quirks caused by backdrop-filter. */
+@media (max-width:1120px){
+  .site-header.menu-open{
+    background:rgba(3,9,20,.97);
+    backdrop-filter:none;
+    -webkit-backdrop-filter:none;
+  }
+
+  .inner-header.menu-open{
+    background:rgba(245,242,234,.99);
+  }
+
+  .site-header.menu-open .nav-links{
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    bottom:auto;
+    width:100%;
+    height:calc(100dvh - var(--announcement-height) - var(--header-height));
+    max-height:calc(100dvh - var(--announcement-height) - var(--header-height));
+    overflow-x:hidden;
+    overflow-y:auto;
+  }
+
+  .inner-header.menu-open .nav-links{
+    top:100%;
+    height:calc(100dvh - var(--header-height));
+    max-height:calc(100dvh - var(--header-height));
+  }
+
+  body.menu-open{
+    overflow:hidden;
+    touch-action:auto;
+  }
+}
+
+@media (max-width:640px){
+  .site-header.menu-open .nav-links{
+    height:calc(100dvh - var(--announcement-height) - var(--header-height));
+    max-height:calc(100dvh - var(--announcement-height) - var(--header-height));
+  }
+
+  .inner-header.menu-open .nav-links{
+    height:calc(100dvh - var(--header-height));
+    max-height:calc(100dvh - var(--header-height));
+  }
+}
