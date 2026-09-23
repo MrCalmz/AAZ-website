@@ -84,6 +84,7 @@ button{color:inherit}
 .feature-points span{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);background:rgba(255,255,255,.32);padding:9px 11px;font-size:9px;letter-spacing:.05em;color:#526176}
 .feature-points b{font-size:8px;color:var(--gold);letter-spacing:.12em}
 
+.process-section{background:#fff}.process-heading{margin-bottom:50px}.process-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.process-step{padding:31px 28px 38px;border-right:1px solid var(--line)}.process-step:first-child{border-left:1px solid var(--line)}.process-step span{font-size:9px;letter-spacing:.18em;color:var(--gold)}.process-step h3{font-family:var(--serif);font-size:31px;font-weight:500;line-height:1.05;margin:52px 0 10px}.process-step p{margin:0;color:#647286;font-size:13px;line-height:1.75}
 .section-services{background:var(--paper-2)}
 .section-heading{margin-bottom:52px}
 .service-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
@@ -265,6 +266,7 @@ button{color:inherit}
   .site-header.menu-open .nav-links a{padding:13px 0}
   .site-header.menu-open .nav-cta{display:flex;position:fixed;left:24px;right:24px;bottom:22px;z-index:2}
   .two-col,.story-wrap,.booking-grid,.experience-grid,.image-band-grid,.landing-layout,.split-callout{grid-template-columns:1fr;gap:42px}
+  .process-grid{grid-template-columns:1fr 1fr}.process-step:nth-child(odd){border-left:1px solid var(--line)}
   .trust-inner{grid-template-columns:1fr 1fr;padding:10px 0;row-gap:12px}
   .trust-inner span+span{border-left:0}
   .fleet-mosaic{grid-template-columns:1fr 1fr;grid-template-rows:330px 270px 270px}
@@ -298,7 +300,7 @@ button{color:inherit}
   .lead{font-size:16px}
   .service-grid{grid-template-columns:1fr}
   .service-card{min-height:245px;border-left:1px solid var(--line)!important}
-  .fleet-mosaic{grid-template-columns:1fr;grid-template-rows:390px repeat(3,270px)}
+  .process-grid{grid-template-columns:1fr}.process-step{border-left:1px solid var(--line)!important}.fleet-mosaic{grid-template-columns:1fr;grid-template-rows:390px repeat(3,270px)}
   .vehicle-card-large{grid-column:auto}
   .fleet-foot{display:grid;justify-content:stretch;gap:6px}
   .route-feature{grid-template-columns:1fr}
