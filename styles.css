@@ -1172,3 +1172,8 @@ html:has(.inner-header){
 .mobile-menu-note{
   display:none;
 }
+
+@media (max-width:1120px){
+  .mobile-menu-cta{display:flex !important;}
+  .mobile-menu-note{display:block;}
+}
