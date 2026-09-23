@@ -924,3 +924,194 @@ body.menu-open .whatsapp-quick{
     padding:8px 12px 8px 10px;
   }
 }
+
+
+/* =========================================================
+   Final cross-page mobile navigation and overflow fixes
+   ========================================================= */
+html:has(.inner-header){
+  scroll-padding-top:calc(var(--header-height) + 18px);
+}
+
+.inner-header{
+  top:0;
+}
+
+.site-header{
+  overflow:visible;
+}
+
+@media (max-width:1120px){
+  .site-header.menu-open .nav-links{
+    top:calc(var(--announcement-height) + var(--header-height));
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    max-width:none;
+    min-width:0;
+    z-index:70;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    padding:26px 24px calc(112px + env(safe-area-inset-bottom));
+    gap:0;
+    overflow-x:hidden;
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    background:rgba(3,9,20,.985);
+    color:#fff;
+    box-shadow:0 24px 70px rgba(3,9,20,.28);
+  }
+
+  .inner-header.menu-open .nav-links{
+    top:var(--header-height);
+    background:rgba(245,242,234,.99);
+    color:var(--ink);
+  }
+
+  .site-header.menu-open .nav-cta{
+    display:none !important;
+  }
+
+  .site-header.menu-open .nav-links a:not(.mobile-menu-cta){
+    position:relative;
+    display:flex;
+    align-items:center;
+    min-height:62px;
+    padding:14px 3px 14px 38px;
+    border-bottom:1px solid rgba(255,255,255,.10);
+    opacity:.78;
+    font-size:18px;
+    letter-spacing:.015em;
+    text-transform:none;
+  }
+
+  .inner-header.menu-open .nav-links a:not(.mobile-menu-cta){
+    border-bottom-color:var(--line);
+  }
+
+  .site-header.menu-open .nav-links a:not(.mobile-menu-cta)::before{
+    position:absolute;
+    left:3px;
+    font-size:8px;
+    letter-spacing:.16em;
+    color:var(--gold);
+    opacity:1;
+  }
+
+  .site-header.menu-open .nav-links a:nth-child(1)::before{content:"01";}
+  .site-header.menu-open .nav-links a:nth-child(2)::before{content:"02";}
+  .site-header.menu-open .nav-links a:nth-child(3)::before{content:"03";}
+  .site-header.menu-open .nav-links a:nth-child(4)::before{content:"04";}
+  .site-header.menu-open .nav-links a:nth-child(5)::before{content:"05";}
+
+  .site-header.menu-open .nav-links a[aria-current="page"]{
+    opacity:1;
+  }
+
+  .site-header.menu-open .nav-links a[aria-current="page"]::after{
+    display:none;
+  }
+
+  .mobile-menu-cta{
+    order:10;
+    display:flex !important;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    min-height:50px;
+    margin-top:auto;
+    margin-bottom:13px;
+    padding:14px 16px;
+    border:1px solid rgba(199,167,109,.48);
+    background:rgba(199,167,109,.12);
+    color:inherit;
+    font-size:10px !important;
+    letter-spacing:.13em !important;
+    text-transform:uppercase !important;
+    opacity:1 !important;
+  }
+
+  .mobile-menu-cta span{
+    transition:transform .25s ease;
+  }
+
+  .mobile-menu-cta:hover{
+    background:rgba(199,167,109,.18);
+  }
+
+  .mobile-menu-cta:hover span{
+    transform:translateX(4px);
+  }
+
+  .mobile-menu-note{
+    order:11;
+    display:block;
+    margin-top:0;
+    padding-top:13px;
+    border-top:1px solid rgba(255,255,255,.10);
+    color:#7f90a5;
+    font-size:7px;
+    line-height:1.5;
+    letter-spacing:.17em;
+  }
+
+  .inner-header.menu-open .mobile-menu-note{
+    border-top-color:var(--line);
+    color:var(--muted);
+  }
+
+  body.menu-open{
+    overflow:hidden;
+    touch-action:none;
+  }
+
+  .whatsapp-quick{
+    max-width:calc(100vw - 28px);
+  }
+}
+
+@media (max-width:640px){
+  html:has(.inner-header){
+    scroll-padding-top:calc(var(--header-height) + 14px);
+  }
+
+  .site-header.menu-open .nav-links{
+    padding:20px 18px calc(104px + env(safe-area-inset-bottom));
+  }
+
+  .inner-header.menu-open .nav-links{
+    top:var(--header-height);
+  }
+
+  .site-header.menu-open .nav-links a:not(.mobile-menu-cta){
+    min-height:58px;
+    padding-left:35px;
+    font-size:17px;
+  }
+
+  .mobile-menu-cta{
+    min-height:48px;
+    margin-bottom:11px;
+    padding:13px 14px;
+  }
+
+  .mobile-menu-note{
+    font-size:6.5px;
+    letter-spacing:.14em;
+  }
+
+  .whatsapp-quick{
+    right:14px;
+    bottom:calc(14px + env(safe-area-inset-bottom));
+  }
+
+  .site-footer,
+  .section,
+  .page-hero,
+  .route-feature,
+  .booking-section{
+    max-width:100%;
+  }
+}
