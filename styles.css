@@ -1166,3 +1166,9 @@ html:has(.inner-header){
     max-height:calc(100dvh - var(--header-height));
   }
 }
+
+
+.mobile-menu-cta,
+.mobile-menu-note{
+  display:none;
+}
