@@ -1,7 +1,7 @@
 document.documentElement.classList.add("js");
 
 const AAZ_CONFIG = {
-  whatsappNumber: "2347048894637", // Digits only, e.g. 2348012345678
+  whatsappNumber: "2348034626665", // Digits only, e.g. 2348012345678
   quickWhatsAppMessage: "Hello AAZ Global Logistics Ventures & Autos, I would like to arrange a private chauffeur journey. Please let me know availability and what details you need from me.",
 };
 
